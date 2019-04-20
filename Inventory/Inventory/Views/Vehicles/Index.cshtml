@@ -37,13 +37,13 @@
     {
         <tr>
             <td>
-                <div class="card" style="width: 18rem;" border="solid">
+                <div class="card" style="width: 18rem;">
                     <div class="card-body">
-                        <h5 class="card-title">Vehicles</h5>
+                        <h5 class="card-title">@Html.DisplayFor(modelItem => item.Make)</h5>
                         <h6 class="card-title"></h6>
                         <h7 class="card-text"> @Html.DisplayFor(modelItem => item.VIN)</h7>
                         <h8 class="card-text">@Html.DisplayFor(modelItem => item.Year)</h8>
-                        <h9 class="card-text">@Html.DisplayFor(modelItem => item.Make)</h9>
+                        @*<h9 class="card-text">//I Moved this up to the Title Row</h9>*@
                         <h10 class="card-text">@Html.DisplayFor(modelItem => item.Model)</h10>
                         <h11 class="card-text">@Html.DisplayFor(modelItem => item.Color)</h11>
                         <h12 class="card-text">@Html.DisplayFor(modelItem => item.Cost)</h12>
