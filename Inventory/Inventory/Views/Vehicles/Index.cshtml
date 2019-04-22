@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Inventory.Models.Vehicle>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Vehicles";
     
 }
 
@@ -48,6 +48,7 @@
                         <h11 class="card-text">@Html.DisplayFor(modelItem => item.Color)</h11>
                         <h12 class="card-text">@Html.DisplayFor(modelItem => item.Cost)</h12>
                         <p class="card-text"></p>
+                        @*Might not need The details link*@
                         <a href="#" class="card-link">@Html.ActionLink("Details", "Details", new { id = item.VIN }, new { @class = "btn btn-primary" }) |</a>
                         <a href="#" class="card-link">@Html.ActionLink("Purchase", "Purchase", new { id = item.VIN }, new { @class = "btn btn-warning" }) |</a>
                         <a href="#" class="card-link">@Html.ActionLink("Sell", "Sell", new { id = item.VIN }, new { @class = "btn btn-success" })</a>
