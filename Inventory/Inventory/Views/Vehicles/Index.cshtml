@@ -8,56 +8,79 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Add New Vehicle", "Create")
 </p>
 <table class="table">
-    @*<tr>
-        <th>
-            @Html.DisplayNameFor(model => model.VIN)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Year)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Make)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Model)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Color)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Cost)
-        </th>
-        <th></th>
-    </tr>*@
+    <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.VIN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Make)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Model)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cost)
+            </th>
+            <th></th>
+        </tr>
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">@Html.DisplayFor(modelItem => item.Make)</h5>
-                        <h6 class="card-title"></h6>
-                        <h7 class="card-text"> @Html.DisplayFor(modelItem => item.VIN)</h7>
-                        <h8 class="card-text">@Html.DisplayFor(modelItem => item.Year)</h8>
-                        @*<h9 class="card-text">//I Moved this up to the Title Row</h9>*@
-                        <h10 class="card-text">@Html.DisplayFor(modelItem => item.Model)</h10>
-                        <h11 class="card-text">@Html.DisplayFor(modelItem => item.Color)</h11>
-                        <h12 class="card-text">@Html.DisplayFor(modelItem => item.Cost)</h12>
-                        <p class="card-text"></p>
-                        @*Might not need The details link*@
-                        <a href="#" class="card-link">@Html.ActionLink("Details", "Details", new { id = item.VIN }, new { @class = "btn btn-primary" }) |</a>
-                        <a href="#" class="card-link">@Html.ActionLink("Purchase", "Purchase", new { id = item.VIN }, new { @class = "btn btn-warning" }) |</a>
-                        <a href="#" class="card-link">@Html.ActionLink("Sell", "Sell", new { id = item.VIN }, new { @class = "btn btn-success" })</a>
-                    </div>
-                </div>
-            </td>
-        </tr>
-    
-        
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.VIN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Year)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Make)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Model)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Color)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cost)
+        </td>
+        <td>
+            @*@Html.ActionLink("Purchase", "Purchase", new { id = item.VIN }, new { @class = "btn btn-warning" }) |*@
+            @Html.ActionLink("Sell", "Sell", new { id = item.VIN }, new { @class = "btn btn-success" })
+            @*@Html.ActionLink("Details", "Details", new { id = item.VIN }, new { @class = "btn btn-primary" }) |*@
+        </td>
+    </tr>
+
     }
 
 </table>
+
+@*<td>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">@Html.DisplayFor(modelItem => item.Make)</h5>
+                            <h6 class="card-title"></h6>
+                            <h7 class="card-text"> @Html.DisplayFor(modelItem => item.VIN)</h7>
+                            <h8 class="card-text"><br /> @Html.DisplayFor(modelItem => item.Year) </h8>
+                            <h9 class="card-text"> <br /> @Html.DisplayFor(modelItem => item.Make) </h9>
+                            <h10 class="card-text"> <br /> @Html.DisplayFor(modelItem => item.Model) </h10>
+                            <h11 class="card-text"> <br /> @Html.DisplayFor(modelItem => item.Color) </h11>
+                            <h12 class="card-text"> <br /> @Html.DisplayFor(modelItem => item.Cost)  </h12>
+                            <p class="card-text"></p>
+                            Might not need The details link
+                            <a href="#" class="card-link">@Html.ActionLink("Details", "Details", new { id = item.VIN }, new { @class = "btn btn-primary" }) |</a>
+                            <a href="#" class="card-link">@Html.ActionLink("Purchase", "Purchase", new { id = item.VIN }, new { @class = "btn btn-warning" }) |</a>
+                            <a href="#" class="card-link">@Html.ActionLink("Sell", "Sell", new { id = item.VIN }, new { @class = "btn btn-success" })</a>
+                        </div>
+                    </div>
+                </td>*@
