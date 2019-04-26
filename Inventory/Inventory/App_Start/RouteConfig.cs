@@ -16,7 +16,7 @@ namespace Inventory
             routes.MapRoute(
             name: "Vehicles",
             url: "{controller}/{action}/{id}",
-            defaults: new { controller = "Vehicles", action = "Index", id = UrlParameter.Optional }
+            defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
             
     
