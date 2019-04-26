@@ -22,7 +22,7 @@ namespace Inventory.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Further inquiries about the inventory please feel free to contact any of the three emails below.";
 
             return View();
         }
