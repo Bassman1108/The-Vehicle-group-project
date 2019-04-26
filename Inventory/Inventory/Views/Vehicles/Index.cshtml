@@ -58,7 +58,7 @@
         </td>
         <td>
             @*@Html.ActionLink("Purchase", "Purchase", new { id = item.VIN }, new { @class = "btn btn-warning" }) |*@
-            @Html.ActionLink("Sell", "Sell", new { id = item.VIN }, new { @class = "btn btn-success" })
+            @Html.ActionLink("Sell", "Delete", new { id = item.VIN }, new { @class = "btn btn-danger" })
             @*@Html.ActionLink("Details", "Details", new { id = item.VIN }, new { @class = "btn btn-primary" }) |*@
         </td>
     </tr>
