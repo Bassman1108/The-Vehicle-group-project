@@ -4,7 +4,7 @@
     background-repeat: no-repeat;
     text-decoration-color: ghostwhite;
     height: 100%;
-    background-size: 100% 100% 100% 100%;
+    background-size: cover ;
 
 }
 
@@ -35,4 +35,7 @@ img{
     opacity: .8;
     background-position: center;
 
+}
+#div.jumbotron{
+    background-color: black;
 }
