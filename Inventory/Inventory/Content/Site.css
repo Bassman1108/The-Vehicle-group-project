@@ -1,12 +1,19 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-repeat: no-repeat;
+    text-decoration-color: ghostwhite;
+    height: 100%;
+    background-size: cover ;
+
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    color: ghostwhite;
+    
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -21,4 +28,14 @@ input,
 select,
 textarea {
     max-width: 280px;
+    color: ghostwhite;
+}
+img{
+    background-size: cover;
+    opacity: .8;
+    background-position: center;
+
+}
+#div.jumbotron{
+    background-color: black;
 }
